@@ -79,7 +79,7 @@ body{
   font-size: 18px;
 }
 .container {
-  max-width: 50%;
+  max-width: 40%;
   margin: 0 auto;
 }
 .title {
@@ -89,29 +89,56 @@ body{
 .bayan:hover{
 color: #fff;
 transition: ease 0.3s;
+
 }
+.fa-plus{
+  display: none;
+  color: black;
+
+}
+.bayan:hover>.item .fa-plus{
+  display: block;
+}
+
 .item {
+ 
+  display: flex;
+  justify-content: space-between;
 }
+
 .item-title {
+  
   padding: 0.8rem 0.5rem;
   cursor: pointer;
   display: block;
 }
 
-.bayan__checkbox {
+.bayan__radio {
   appearance: none;
   position: absolute;
  
 }
-.bayan__checkbox:checked + .bayan__meme{
-  display: block;
-  transition: ease 1s;
-
+.bayan__img{
+ 
+ height: 0rem;
+ transition: all 3s ease;
 }
 .bayan__meme {
-  transition: ease 1s;
-display: none;
+  
+
 }
-.bayan__img{
-  width: 100%;
+
+.bayan__radio:checked + .bayan__meme>.bayan__img{
+  height: 20rem;
+
+}
+.bayan__radio:hover + .bayan__meme>.bayan__img{
+  height: 20rem;
+
+}
+
+
+.fa-plus{
+  top: 0;
+  right: 0;
 }
