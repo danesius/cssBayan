@@ -92,12 +92,20 @@ transition: ease 0.3s;
 
 }
 .fa-plus{
-  display: none;
+opacity: 0;
+transition: all 0.3s ease;
   color: black;
 
 }
-.bayan:hover>.item .fa-plus{
-  display: block;
+.bayan:hover>.item__container .item .fa-plus{
+opacity: 1;
+}
+.item:hover .fa-plus{
+
+  transform: rotate(45deg) translate(-10px);
+}
+.bayan__radio:checked ~ .item>.fa-plus{
+  transform: rotate(45deg) translate(-10px);
 }
 
 .item {
@@ -128,14 +136,15 @@ transition: ease 0.3s;
 
 }
 
-.bayan__radio:checked + .bayan__meme>.bayan__img{
+.bayan__radio:checked ~ .bayan__meme>.bayan__img{
   height: 20rem;
 
 }
-.bayan__radio:hover + .bayan__meme>.bayan__img{
+.bayan__radio:hover ~ .bayan__meme>.bayan__img{
   height: 20rem;
 
 }
+
 
 
 .fa-plus{
