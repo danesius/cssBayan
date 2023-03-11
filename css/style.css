@@ -100,7 +100,7 @@ transition: all 0.3s ease;
 .bayan:hover>.item__container .item .fa-plus{
 opacity: 1;
 }
-.item:hover .fa-plus{
+.bayan__radio:hover~ .item>.fa-plus{
 
   transform: rotate(45deg) translate(-10px);
 }
@@ -133,11 +133,20 @@ opacity: 1;
 }
 .bayan__meme {
  
-  
+
+
+}
+.item__container>.bayan__radio{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
 
 }
 .item__container{
-  cursor: pointer;
+ 
 }
 
 .bayan__radio:checked ~ .bayan__meme>.bayan__img{
