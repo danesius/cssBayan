@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: chocolate;
+  font-size: 30px;
+}
+.container {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.item__container{
+  position: relative;
+}
+
+
+.fa-plus{
+opacity: 0;
+transition: all 0.3s ease;
+  color: black;
+
+}
+
+.bayan__radio:checked ~ .item>.fa-plus{
+  opacity: 1;
+  transform: rotate(45deg) translate(-10px);
+ 
+}
+.bayan__radio:checked ~ .item>.item-title{
+  color: #fff;
+}
+
+.item {
+ 
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-title {
+  
+  padding: 0.8rem 0.5rem;
+  cursor: pointer;
+  display: block;
+}
+
+
+.bayan__img{
+  
+ width: 50%;;
+ height: 0rem;
+ transition: all 3s ease;
+}
+.bayan__meme {
+ text-align: center;
+
+
+}
+
+.bayan__radio{
+  appearance: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+
+.bayan__radio:checked ~ .bayan__meme>.bayan__img{
+  height: 10rem;
+
+
+}
+
+
+
+
+
+
+@media (min-width:768px){
+  body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 25px;
+    }
+    .bayan__radio:checked ~ .bayan__meme>.bayan__img{
+      height: 15rem;
+    
+    }
+    
+    .container {
+      max-width: 55%;
+    }
+    
+     
+    
+}
+@media(min-width:1200px){
+  body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+  .bayan__radio:checked ~ .bayan__meme>.bayan__img{
+    height: 20rem;
+  
+  }
+  .item__container:hover > .bayan__meme>.bayan__img{
+    height: 20rem;
+  }
+  .container {
+    max-width: 40%;
+  }
+  .bayan:hover>.item__container .item .fa-plus{
+    opacity: 1;
+    }
+    .bayan__radio:hover~ .item>.fa-plus{
+    
+      transform: rotate(45deg) translate(-10px);
+    }
+    .bayan:hover{
+      color: #fff;
+      transition: ease 0.3s;
+      
+      }
+}
