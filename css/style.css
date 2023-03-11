@@ -132,15 +132,19 @@ opacity: 1;
  transition: all 3s ease;
 }
 .bayan__meme {
+ 
   
 
+}
+.item__container{
+  cursor: pointer;
 }
 
 .bayan__radio:checked ~ .bayan__meme>.bayan__img{
   height: 20rem;
 
 }
-.bayan__radio:hover ~ .bayan__meme>.bayan__img{
+.item__container:hover > .bayan__meme>.bayan__img{
   height: 20rem;
 
 }
