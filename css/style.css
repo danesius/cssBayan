@@ -74,38 +74,32 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  line-height: 2;
   background-color: chocolate;
-  font-size: 18px;
+  font-size: 30px;
 }
 .container {
-  max-width: 40%;
+  max-width: 60%;
   margin: 0 auto;
 }
-.title {
-  
+.item__container{
+  position: relative;
 }
 
-.bayan:hover{
-color: #fff;
-transition: ease 0.3s;
 
-}
 .fa-plus{
 opacity: 0;
 transition: all 0.3s ease;
   color: black;
 
 }
-.bayan:hover>.item__container .item .fa-plus{
-opacity: 1;
-}
-.bayan__radio:hover~ .item>.fa-plus{
 
-  transform: rotate(45deg) translate(-10px);
-}
 .bayan__radio:checked ~ .item>.fa-plus{
+  opacity: 1;
   transform: rotate(45deg) translate(-10px);
+ 
+}
+.bayan__radio:checked ~ .item>.item-title{
+  color: #fff;
 }
 
 .item {
@@ -121,22 +115,21 @@ opacity: 1;
   display: block;
 }
 
-.bayan__radio {
-  appearance: none;
-  position: absolute;
- 
-}
+
 .bayan__img{
- 
+  
+ width: 50%;;
  height: 0rem;
  transition: all 3s ease;
 }
 .bayan__meme {
- 
+ text-align: center;
 
 
 }
-.item__container>.bayan__radio{
+
+.bayan__radio{
+  appearance: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -145,22 +138,61 @@ opacity: 1;
   cursor: pointer;
 
 }
-.item__container{
- 
-}
+
 
 .bayan__radio:checked ~ .bayan__meme>.bayan__img{
-  height: 20rem;
+  height: 10rem;
 
-}
-.item__container:hover > .bayan__meme>.bayan__img{
-  height: 20rem;
 
 }
 
 
 
-.fa-plus{
-  top: 0;
-  right: 0;
+
+
+
+@media (min-width:768px){
+  body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 25px;
+    }
+    .bayan__radio:checked ~ .bayan__meme>.bayan__img{
+      height: 15rem;
+    
+    }
+    
+    .container {
+      max-width: 55%;
+    }
+    
+     
+    
+}
+@media(min-width:1200px){
+  body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+  }
+  .bayan__radio:checked ~ .bayan__meme>.bayan__img{
+    height: 20rem;
+  
+  }
+  .item__container:hover > .bayan__meme>.bayan__img{
+    height: 20rem;
+  }
+  .container {
+    max-width: 40%;
+  }
+  .bayan:hover>.item__container .item .fa-plus{
+    opacity: 1;
+    }
+    .bayan__radio:hover~ .item>.fa-plus{
+    
+      transform: rotate(45deg) translate(-10px);
+    }
+    .bayan:hover{
+      color: #fff;
+      transition: ease 0.3s;
+      
+      }
 }
