@@ -6,17 +6,7 @@
   border: 0;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
 
-:focus, :active {
-  outline: none;
-}
-
-a:focus, a:active {
-  outline: none;
-}
 
 nav, footer, header, aside {
   display: block;
@@ -27,7 +17,7 @@ html, body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -50,9 +40,7 @@ button::-moz-focus-inner {
   border: 0;
 }
    
-a, a:visited {
-  text-decoration: none;
-}
+
 
 a:hover {
   text-decoration: none;
@@ -62,9 +50,7 @@ ul li {
   list-style: none;
 }
 
-img {
-  vertical-align: top;
-}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
@@ -75,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: chocolate;
-  font-size: 30px;
+  font-size: 2.2rem;
 }
 .container {
   max-width: 60%;
@@ -154,7 +140,7 @@ transition: all 0.3s ease;
 @media (min-width:768px){
   body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      font-size: 25px;
+      font-size: 1.8rem;
     }
     .bayan__radio:checked ~ .bayan__meme>.bayan__img{
       height: 15rem;
@@ -171,7 +157,7 @@ transition: all 0.3s ease;
 @media(min-width:1200px){
   body{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
+    font-size: 1.2rem;
   }
   .bayan__radio:checked ~ .bayan__meme>.bayan__img{
     height: 20rem;
